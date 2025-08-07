@@ -1,15 +1,14 @@
-import { defineConfig } from "vitest/config";
-import path from "node:path";
+/// <reference types="vitest" />
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
     test: {
-        environment: "node",
-        testTimeout: 120000,
-    },
-    assetsInclude: ["**/*.cdc"],
-    resolve: {
-        alias: {
-            "@": path.resolve(__dirname, "./src"),
-        },
-    },
+        globals: true,
+        environment: 'node',
+        coverage: {
+            reporter: ['text', 'json', 'html'],
+            include: ['src/**/*.ts'],
+            exclude: ['**/*.test.ts', '**/*.d.ts']
+        }
+    }
 });
