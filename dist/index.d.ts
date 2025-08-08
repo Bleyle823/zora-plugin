@@ -1,5 +1,5 @@
 import { Plugin } from '@elizaos/core';
 
-declare const polymarketPlugin: Plugin;
+declare const zoraPlugin: Plugin;
 
-export { polymarketPlugin, polymarketPlugin as default };
+export { zoraPlugin as default, zoraPlugin };
